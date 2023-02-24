@@ -1,0 +1,22 @@
+{
+    "categories": [
+        {
+            "idCategory": "1",
+            "strCategory": "Brand Quiz",
+            "linkCategory": "https://wallpapercave.com/wp/BIABia5.jpg",
+            "screen": "BrandQuizScreen.routeName"
+        },
+        {
+            "idCategory": "2",
+            "strCategory": "Model Quiz",
+            "linkCategory": "https://c0.wallpaperflare.com/preview/832/465/155/car-light-headlight-glow.jpg",
+            "screen": "BrandQuizScreen.routeName"
+        },
+        {
+            "idCategory": "3",
+            "strCategory": "Lights Quiz",
+            "linkCategory": "https://c1.wallpaperflare.com/preview/200/862/475/black-background-audi.jpg",
+            "screen": "BrandQuizScreen.routeName"
+        }
+    ]
+}
