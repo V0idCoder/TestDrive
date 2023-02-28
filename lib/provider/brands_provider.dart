@@ -5,6 +5,7 @@ import '../models/brand.dart';
 
 class BrandProvider with ChangeNotifier {
   final List<Brand> _brands = [];
+  int index = 0;
 
   Future<void> fetchAndSetBrands() async {
     _brands.clear();
@@ -20,5 +21,12 @@ class BrandProvider with ChangeNotifier {
 
   List<Brand> get categories {
     return [..._brands];
+  }
+
+  void SetIndex() {
+    if (index < _brands.length) {
+      index++;
+    }
+    notifyListeners();
   }
 }

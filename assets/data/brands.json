@@ -7,25 +7,8 @@
             "choice1": "Audi",
             "choice2": "Bmw",
             "choice3": "Mercedes",
-            "choice4": "Dacia"
-        },
-        {
-            "idBrand": "b2",
-            "strBrand": "Renault",
-            "linkBrand": "https://www.renaultgroup.com/wp-content/uploads/2021/03/nouveau_logo_renault_banner.jpg",
-            "choice1": "Audi",
-            "choice2": "Bmw",
-            "choice3": "Mercedes",
-            "choice4": "Dacia"
-        },
-        {
-            "idBrand": "b2",
-            "strBrand": "Renault",
-            "linkBrand": "https://www.renaultgroup.com/wp-content/uploads/2021/03/nouveau_logo_renault_banner.jpg",
-            "choice1": "Audi",
-            "choice2": "Bmw",
-            "choice3": "Mercedes",
-            "choice4": "Dacia"
+            "choice4": "Dacia",
+            "answer": "Audi"
         }
     ]
 }

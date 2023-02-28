@@ -45,17 +45,17 @@ class CategoryItem extends StatelessWidget {
                         arguments: idCategory);
                   },
                 ),
-                Container(
-                  width: 200,
-                  height: 200,
-                  margin: const EdgeInsets.all(60),
-                  padding: const EdgeInsets.all(5),
-                  child: Center(
-                      child: Text(
-                    strCategory,
-                    style: const TextStyle(color: Colors.yellow),
-                  )),
-                ),
+                // Container(
+                //   width: 200,
+                //   height: 200,
+                //   margin: const EdgeInsets.all(60),
+                //   padding: const EdgeInsets.all(5),
+                //   child: Center(
+                //       child: Text(
+                //     strCategory,
+                //     style: const TextStyle(color: Colors.yellow),
+                //   )),
+                // ),
               ],
             ),
           ),
