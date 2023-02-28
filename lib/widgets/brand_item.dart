@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../screens/brand_quiz.dart';
-
 class BrandItem extends StatefulWidget {
   const BrandItem({
     super.key,
@@ -36,18 +34,10 @@ class _BrandItemState extends State<BrandItem> {
 
   @override
   Widget build(BuildContext context) {
-    final ButtonStyle choiceButtonStyle = ElevatedButton.styleFrom(
-      onPrimary: Colors.white,
-      //primary: pressed1 ? Colors.black : Colors.grey,
-      minimumSize: Size(290, 64),
-      padding: EdgeInsets.symmetric(horizontal: 16),
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.all(Radius.circular(30)),
-      ),
-    );
-
     final ButtonStyle confirmButtonStyle = ElevatedButton.styleFrom(
+      // ignore: deprecated_member_use
       onPrimary: Colors.white,
+      // ignore: deprecated_member_use
       primary: Colors.black,
       minimumSize: const Size(150, 70),
       padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -90,9 +80,9 @@ class _BrandItemState extends State<BrandItem> {
           //Quiz Band Choide Button
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-              onPrimary: Colors.white,
-              primary: pressed1 ? Colors.green : Colors.black,
-              minimumSize: Size(290, 64),
+              shadowColor: Colors.grey,
+              backgroundColor: pressed1 ? Colors.green : Colors.black,
+              minimumSize: const Size(290, 64),
               padding: const EdgeInsets.symmetric(horizontal: 16),
               shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(30)),
