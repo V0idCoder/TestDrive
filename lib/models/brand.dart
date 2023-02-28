@@ -6,9 +6,10 @@ class Brand {
   final String choice2;
   final String choice3;
   final String choice4;
+  final String answer;
 
   Brand(this.idBrand, this.strBrand, this.linkBrand, this.choice1, this.choice2,
-      this.choice3, this.choice4);
+      this.choice3, this.choice4, this.answer);
 
   factory Brand.fromJson(Map<String, dynamic> json) {
     return Brand(
@@ -19,6 +20,7 @@ class Brand {
       json['choice2'] as String,
       json['choice3'] as String,
       json['choice4'] as String,
+      json['answer'] as String,
     );
   }
 }

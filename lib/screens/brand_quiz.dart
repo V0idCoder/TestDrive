@@ -38,10 +38,10 @@ class _BrandQuizScreenState extends State<BrandQuizScreen> {
     final brands = Provider.of<BrandProvider>(context).categories;
     return Scaffold(
       appBar: AppBar(
-        centerTitle: true,
-        title: Image.asset('assets/img/home/testdrive_logo.png',
-            fit: BoxFit.cover),
-      ),
+          // centerTitle: true,
+          // title: Image.asset('assets/img/home/testdrive_logo.png',
+          //     fit: BoxFit.cover),
+          ),
       body: Center(
         child: ListView.builder(
           itemCount: brands.length,
@@ -53,6 +53,7 @@ class _BrandQuizScreenState extends State<BrandQuizScreen> {
             choice2: brands[index].choice2,
             choice3: brands[index].choice3,
             choice4: brands[index].choice4,
+            answer: brands[index].answer,
           ),
         ),
       ),
