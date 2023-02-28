@@ -60,6 +60,7 @@ class _BrandItemState extends State<BrandItem> {
         borderRadius: BorderRadius.all(Radius.circular(30)),
       ),
     );
+
     return Center(
       child: (Column(
         children: [
@@ -202,7 +203,7 @@ class _BrandItemState extends State<BrandItem> {
             style: ElevatedButton.styleFrom(
               // ignore: deprecated_member_use
               onPrimary: Colors.white,
-              backgroundColor: pressed4 ? Colors.grey : Colors.black,
+              backgroundColor: pressed4 ? Colors.green : Colors.black,
               minimumSize: const Size(290, 64),
               padding: const EdgeInsets.symmetric(horizontal: 16),
               shape: const RoundedRectangleBorder(
@@ -237,6 +238,10 @@ class _BrandItemState extends State<BrandItem> {
             child: icon,
             onPressed: () {
               //Call the function next dans brand_quiz.dart pour passer à la question suivante
+              pressed1 = false;
+              pressed2 = false;
+              pressed3 = false;
+              pressed4 = false;
               widget.nextQuestion();
             },
           ),
