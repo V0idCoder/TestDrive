@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -36,24 +38,22 @@ class _BrandQuizScreenState extends State<BrandQuizScreen> {
   Widget build(BuildContext context) {
     final brandId = ModalRoute.of(context)?.settings.arguments as String;
     final brands = Provider.of<BrandProvider>(context).categories;
+    var rng = Random();
+    int rndIndex = rng.nextInt(brands.length);
     return Scaffold(
-      appBar: AppBar(
-          // centerTitle: true,
-          // title: Image.asset('assets/img/home/testdrive_logo.png',
-          //     fit: BoxFit.cover),
-          ),
+      appBar: AppBar(),
       body: Center(
         child: ListView.builder(
-          itemCount: brands.length,
-          itemBuilder: (context, index) => BrandItem(
-            idBrand: brands[index].idBrand,
-            strBrand: brands[index].strBrand,
-            linkBrand: brands[index].linkBrand,
-            choice1: brands[index].choice1,
-            choice2: brands[index].choice2,
-            choice3: brands[index].choice3,
-            choice4: brands[index].choice4,
-            answer: brands[index].answer,
+          itemCount: 1,
+          itemBuilder: (_, index) => BrandItem(
+            idBrand: brands[rndIndex].idBrand,
+            strBrand: brands[rndIndex].strBrand,
+            linkBrand: brands[rndIndex].linkBrand,
+            choice1: brands[rndIndex].choice1,
+            choice2: brands[rndIndex].choice2,
+            choice3: brands[rndIndex].choice3,
+            choice4: brands[rndIndex].choice4,
+            answer: brands[rndIndex].answer,
           ),
         ),
       ),

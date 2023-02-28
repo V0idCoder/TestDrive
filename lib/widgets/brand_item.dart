@@ -31,6 +31,13 @@ class _BrandItemState extends State<BrandItem> {
   bool pressed2 = false;
   bool pressed3 = false;
   bool pressed4 = false;
+  Icon icon = const Icon(
+    Icons.done,
+    color: Colors.white,
+    size: 65.0,
+  );
+  Color vrai = Colors.green;
+  Color faux = Colors.red;
 
   @override
   Widget build(BuildContext context) {
@@ -80,7 +87,7 @@ class _BrandItemState extends State<BrandItem> {
           //Quiz Band Choide Button
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-              shadowColor: Colors.grey,
+              onPrimary: Colors.white,
               backgroundColor: pressed1 ? Colors.green : Colors.black,
               minimumSize: const Size(290, 64),
               padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -94,7 +101,11 @@ class _BrandItemState extends State<BrandItem> {
             ),
             onPressed: () {
               setState(() {
-                pressed1 = !pressed1;
+                if (widget.choice1 == widget.answer) {
+                  pressed1 = !pressed1;
+                } else {
+                  pressed1 = pressed1;
+                }
               });
             },
           ),
@@ -118,7 +129,11 @@ class _BrandItemState extends State<BrandItem> {
             onPressed: () {
               setState(
                 () {
-                  pressed2 = !pressed2;
+                  if (widget.choice2 == widget.answer) {
+                    pressed2 = !pressed2;
+                  } else {
+                    pressed2 = pressed2;
+                  }
                 },
               );
             },
@@ -143,7 +158,11 @@ class _BrandItemState extends State<BrandItem> {
             onPressed: () {
               setState(
                 () {
-                  pressed3 = !pressed3;
+                  if (widget.choice3 == widget.answer) {
+                    pressed3 = !pressed3;
+                  } else {
+                    pressed3 = pressed3;
+                  }
                 },
               );
             },
@@ -154,7 +173,7 @@ class _BrandItemState extends State<BrandItem> {
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               onPrimary: Colors.white,
-              primary: pressed4 ? Colors.green : Colors.black,
+              primary: pressed4 ? Colors.grey : Colors.black,
               minimumSize: Size(290, 64),
               padding: const EdgeInsets.symmetric(horizontal: 16),
               shape: const RoundedRectangleBorder(
@@ -168,7 +187,11 @@ class _BrandItemState extends State<BrandItem> {
             onPressed: () {
               setState(
                 () {
-                  pressed4 = !pressed4;
+                  if (widget.choice4 == widget.answer) {
+                    pressed4 = !pressed4;
+                  } else {
+                    pressed4 = pressed4;
+                  }
                 },
               );
             },
@@ -176,15 +199,18 @@ class _BrandItemState extends State<BrandItem> {
           const SizedBox(
             height: 50.0,
           ),
-
           ElevatedButton(
             style: confirmButtonStyle,
-            onPressed: () {},
-            child: const Icon(
-              Icons.done,
-              color: Colors.white,
-              size: 65.0,
-            ),
+            child: icon,
+            onPressed: () {
+              setState(() {
+                icon = const Icon(
+                  Icons.arrow_forward,
+                  color: Colors.white,
+                  size: 65.0,
+                );
+              });
+            },
           ),
         ],
       )),

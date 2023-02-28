@@ -9,6 +9,26 @@
             "choice3": "Mercedes",
             "choice4": "Dacia",
             "answer": "Audi"
+        },
+        {
+            "idBrand": "b2",
+            "strBrand": "Renault",
+            "linkBrand": "https://www.renaultgroup.com/wp-content/uploads/2021/03/nouveau_logo_renault_banner.jpg",
+            "choice1": "Porche",
+            "choice2": "Bmw",
+            "choice3": "Renault",
+            "choice4": "Dacia",
+            "answer": "Renault"
+        },
+        {
+            "idBrand": "b3",
+            "strBrand": "Renault",
+            "linkBrand": "https://wallpaperaccess.com/full/1124992.jpg",
+            "choice1": "Audi",
+            "choice2": "Bmw",
+            "choice3": "Lada",
+            "choice4": "Citroen",
+            "answer": "Bmw"
         }
     ]
 }
