@@ -29,6 +29,36 @@
             "choice3": "Lada",
             "choice4": "Citroen",
             "answer": "Bmw"
+        },
+        {
+            "idBrand": "b4",
+            "strBrand": "Koenigsegg",
+            "linkBrand": "https://w0.peakpx.com/wallpaper/855/170/HD-wallpaper-koenigsegg-carbon-badge-emblem-logo.jpg",
+            "choice1": "VW",
+            "choice2": "Koenigsegg",
+            "choice3": "Ferrari",
+            "choice4": "Porche",
+            "answer": "Koenigsegg"
+        },
+        {
+            "idBrand": "b5",
+            "strBrand": "Dodge",
+            "linkBrand": "https://w0.peakpx.com/wallpaper/609/766/HD-wallpaper-ram-carbon-dodge-logo-thumbnail.jpg",
+            "choice1": "Chevy",
+            "choice2": "Seat",
+            "choice3": "Ram",
+            "choice4": "Porche",
+            "answer": "Dodge"
+        },
+        {
+            "idBrand": "b6",
+            "strBrand": "VW",
+            "linkBrand": "https://burlappcar.com/wp-content/uploads/2019/08/burlappcar-vw-logo-1.jpg",
+            "choice1": "Fiat",
+            "choice2": "Buggatti",
+            "choice3": "VW",
+            "choice4": "Opel",
+            "answer": "VW"
         }
     ]
 }

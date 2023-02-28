@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 
 class BrandItem extends StatefulWidget {
@@ -11,6 +13,7 @@ class BrandItem extends StatefulWidget {
     required this.choice3,
     required this.choice4,
     required this.answer,
+    required this.nextQuestion,
   });
 
   final String idBrand;
@@ -21,23 +24,28 @@ class BrandItem extends StatefulWidget {
   final String choice3;
   final String choice4;
   final String answer;
+  final Function() nextQuestion;
 
   @override
   State<BrandItem> createState() => _BrandItemState();
 }
 
 class _BrandItemState extends State<BrandItem> {
+  //Bon ce n'est pas trés optimale mais "ça passe"
   bool pressed1 = false;
   bool pressed2 = false;
   bool pressed3 = false;
   bool pressed4 = false;
+
+  //NextButton Icon
   Icon icon = const Icon(
-    Icons.done,
+    Icons.arrow_right_alt_rounded,
     color: Colors.white,
     size: 65.0,
   );
-  Color vrai = Colors.green;
-  Color faux = Colors.red;
+
+  Color trueBackgroundColor = Colors.green;
+  Color falseBackgroundColor = Colors.red;
 
   @override
   Widget build(BuildContext context) {
@@ -55,6 +63,7 @@ class _BrandItemState extends State<BrandItem> {
     return Center(
       child: (Column(
         children: [
+          //Spacer
           const SizedBox(
             height: 25.0,
           ),
@@ -81,14 +90,21 @@ class _BrandItemState extends State<BrandItem> {
               ),
             ),
           ),
+
+          //Spacer
           const SizedBox(
             height: 20.0,
           ),
-          //Quiz Band Choide Button
+
+          //ChoiceButton 1
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               onPrimary: Colors.white,
-              backgroundColor: pressed1 ? Colors.green : Colors.black,
+              backgroundColor: pressed1
+                  ? (widget.answer == widget.choice1
+                      ? trueBackgroundColor
+                      : falseBackgroundColor)
+                  : Colors.black,
               minimumSize: const Size(290, 64),
               padding: const EdgeInsets.symmetric(horizontal: 16),
               shape: const RoundedRectangleBorder(
@@ -109,13 +125,17 @@ class _BrandItemState extends State<BrandItem> {
               });
             },
           ),
+
+          //Spacer
           const SizedBox(
             height: 20.0,
           ),
+
+          //ChoiceButton 2
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               onPrimary: Colors.white,
-              primary: pressed2 ? Colors.green : Colors.black,
+              backgroundColor: pressed2 ? Colors.green : Colors.black,
               minimumSize: Size(290, 64),
               padding: const EdgeInsets.symmetric(horizontal: 16),
               shape: const RoundedRectangleBorder(
@@ -138,13 +158,17 @@ class _BrandItemState extends State<BrandItem> {
               );
             },
           ),
+
+          //Spacer
           const SizedBox(
             height: 20.0,
           ),
+
+          //ChoiceButton 3
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               onPrimary: Colors.white,
-              primary: pressed3 ? Colors.green : Colors.black,
+              backgroundColor: pressed3 ? Colors.green : Colors.black,
               minimumSize: Size(290, 64),
               padding: const EdgeInsets.symmetric(horizontal: 16),
               shape: const RoundedRectangleBorder(
@@ -167,14 +191,19 @@ class _BrandItemState extends State<BrandItem> {
               );
             },
           ),
+
+          //Spacer
           const SizedBox(
             height: 20.0,
           ),
+
+          //ChoiceButton 4
           ElevatedButton(
             style: ElevatedButton.styleFrom(
+              // ignore: deprecated_member_use
               onPrimary: Colors.white,
-              primary: pressed4 ? Colors.grey : Colors.black,
-              minimumSize: Size(290, 64),
+              backgroundColor: pressed4 ? Colors.grey : Colors.black,
+              minimumSize: const Size(290, 64),
               padding: const EdgeInsets.symmetric(horizontal: 16),
               shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(30)),
@@ -196,20 +225,19 @@ class _BrandItemState extends State<BrandItem> {
               );
             },
           ),
+
+          //Spacer
           const SizedBox(
             height: 50.0,
           ),
+
+          //NextButton -> Show the next question
           ElevatedButton(
             style: confirmButtonStyle,
             child: icon,
             onPressed: () {
-              setState(() {
-                icon = const Icon(
-                  Icons.arrow_forward,
-                  color: Colors.white,
-                  size: 65.0,
-                );
-              });
+              //Call the function next dans brand_quiz.dart pour passer à la question suivante
+              widget.nextQuestion();
             },
           ),
         ],
