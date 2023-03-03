@@ -6,6 +6,7 @@ import './screens/home_page.dart';
 import 'provider/categories_provider.dart';
 import 'screens/brand_quiz.dart';
 import 'provider/brands_provider.dart';
+import 'screens/end_brand_quiz.dart';
 
 void main() {
   runApp(const TestDrive());
@@ -32,6 +33,7 @@ class TestDrive extends StatelessWidget {
         routes: {
           '/': (context) => const HomePage(),
           BrandQuizScreen.routeName: (context) => const BrandQuizScreen(),
+          EndBrandQuiz.routeName: (context) => const EndBrandQuiz(),
         },
         theme: theme,
       ),

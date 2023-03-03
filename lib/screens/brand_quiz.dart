@@ -1,10 +1,12 @@
 import 'dart:math'; //Import utilisé pour le Random()
+import 'dart:developer' as developer;
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../provider/brands_provider.dart';
 import '../widgets/brand_item.dart';
+import 'end_brand_quiz.dart';
 
 class BrandQuizScreen extends StatefulWidget {
   static const routeName = '/brand_quiz';
@@ -22,6 +24,8 @@ class _BrandQuizScreenState extends State<BrandQuizScreen> {
   //Nombre max des questions de brands.json
   int lengthBrands = 0;
 
+  int index = 0;
+
   @override
   Future<void> didChangeDependencies() async {
     if (!_isInit) {
@@ -36,6 +40,17 @@ class _BrandQuizScreenState extends State<BrandQuizScreen> {
     setState(() {
       var rng = Random();
       rndIndex = rng.nextInt(lengthBrands);
+    });
+  }
+
+  void endGame() {
+    setState(() {
+      if (index > lengthBrands) {
+        Navigator.of(context).pushNamed(EndBrandQuiz.routeName);
+        developer.log('EndGame');
+      } else {
+        index++;
+      }
     });
   }
 
@@ -61,6 +76,7 @@ class _BrandQuizScreenState extends State<BrandQuizScreen> {
           choice4: brands[rndIndex].choice4,
           answer: brands[rndIndex].answer,
           nextQuestion: next,
+          endGame: endGame,
         ),
       ),
     );

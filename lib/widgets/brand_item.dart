@@ -1,6 +1,10 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
+import 'package:testdrive/screens/home_page.dart';
+import 'package:testdrive/screens/test.dart';
+
+import '../screens/brand_quiz.dart';
 
 class BrandItem extends StatefulWidget {
   const BrandItem({
@@ -14,6 +18,7 @@ class BrandItem extends StatefulWidget {
     required this.choice4,
     required this.answer,
     required this.nextQuestion,
+    required this.endGame,
   });
 
   final String idBrand;
@@ -25,6 +30,7 @@ class BrandItem extends StatefulWidget {
   final String choice4;
   final String answer;
   final Function() nextQuestion;
+  final Function() endGame;
 
   @override
   State<BrandItem> createState() => _BrandItemState();
@@ -243,6 +249,9 @@ class _BrandItemState extends State<BrandItem> {
               pressed3 = false;
               pressed4 = false;
               widget.nextQuestion();
+              widget.endGame();
+
+              // Navigator.of(context).pushNamed(Test.routeName);
             },
           ),
         ],
