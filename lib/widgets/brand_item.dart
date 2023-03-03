@@ -243,11 +243,12 @@ class _BrandItemState extends State<BrandItem> {
             style: confirmButtonStyle,
             child: icon,
             onPressed: () {
-              //Call the function next dans brand_quiz.dart pour passer à la question suivante
+              //Resset the button color 
               pressed1 = false;
               pressed2 = false;
               pressed3 = false;
               pressed4 = false;
+              //Call the function next dans brand_quiz.dart pour passer à la question suivante
               widget.nextQuestion();
               widget.endGame();
 
