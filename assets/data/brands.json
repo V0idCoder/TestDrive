@@ -59,6 +59,46 @@
             "choice3": "VW",
             "choice4": "Opel",
             "answer": "VW"
+        },
+        {
+            "idBrand": "b7",
+            "strBrand": "Ford",
+            "linkBrand": "https://w0.peakpx.com/wallpaper/411/325/HD-wallpaper-ford-logo-ford-emblem-on-a-black-background-ford-automobile-brand-ford-emblem.jpg",
+            "choice1": "DS",
+            "choice2": "Ford",
+            "choice3": "VW",
+            "choice4": "Alpha Romeo",
+            "answer": "Ford"
+        },
+        {
+            "idBrand": "b8",
+            "strBrand": "Ford",
+            "linkBrand": "https://w0.peakpx.com/wallpaper/411/325/HD-wallpaper-ford-logo-ford-emblem-on-a-black-background-ford-automobile-brand-ford-emblem.jpg",
+            "choice1": "DS",
+            "choice2": "Ford",
+            "choice3": "VW",
+            "choice4": "Alpha Romeo",
+            "answer": "Ford"
+        },
+        {
+            "idBrand": "b9",
+            "strBrand": "Ford",
+            "linkBrand": "https://w0.peakpx.com/wallpaper/411/325/HD-wallpaper-ford-logo-ford-emblem-on-a-black-background-ford-automobile-brand-ford-emblem.jpg",
+            "choice1": "DS",
+            "choice2": "Ford",
+            "choice3": "VW",
+            "choice4": "Alpha Romeo",
+            "answer": "Ford"
+        },
+        {
+            "idBrand": "b10",
+            "strBrand": "Ford",
+            "linkBrand": "https://w0.peakpx.com/wallpaper/411/325/HD-wallpaper-ford-logo-ford-emblem-on-a-black-background-ford-automobile-brand-ford-emblem.jpg",
+            "choice1": "DS",
+            "choice2": "Ford",
+            "choice3": "VW",
+            "choice4": "Alpha Romeo",
+            "answer": "Ford"
         }
     ]
 }

@@ -23,8 +23,10 @@ class _BrandQuizScreenState extends State<BrandQuizScreen> {
   int rndIndex = 0;
   //Nombre max des questions de brands.json
   int lengthBrands = 0;
+  int lengthBrands2 = 0;
 
   int index = 0;
+  int index2 = 1;
 
   @override
   Future<void> didChangeDependencies() async {
@@ -40,6 +42,9 @@ class _BrandQuizScreenState extends State<BrandQuizScreen> {
     setState(() {
       var rng = Random();
       rndIndex = rng.nextInt(lengthBrands);
+      if (rndIndex == rndIndex) {
+        rndIndex = rng.nextInt(lengthBrands);
+      }
     });
   }
 
@@ -50,23 +55,27 @@ class _BrandQuizScreenState extends State<BrandQuizScreen> {
         developer.log('EndGame');
       } else {
         index++;
+        index2++;
       }
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    final brands = Provider.of<BrandProvider>(context).categories;
-    lengthBrands = Provider.of<BrandProvider>(context).categories.length;
+    final brands = Provider.of<BrandProvider>(context).brands;
+    lengthBrands = Provider.of<BrandProvider>(context).brands.length;
+    lengthBrands2 = (Provider.of<BrandProvider>(context).brands.length) + 2;
 
     //Call the Random() function
     var rnd = Random();
     //May Random() lenghts par rapport au nb de questions dans brands.js
     rndIndex = rnd.nextInt(lengthBrands);
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text('$index2 / $lengthBrands2'),
+      ),
       body: Center(
-        child: BrandItem(
+        child: ModelItem(
           idBrand: brands[rndIndex].idBrand,
           strBrand: brands[rndIndex].strBrand,
           linkBrand: brands[rndIndex].linkBrand,

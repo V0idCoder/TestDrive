@@ -2,13 +2,13 @@ class Category {
   final String idCategory;
   final String strCategory;
   final String linkCategory;
-  // final String screen;
+  final String screen;
 
   Category(
     this.idCategory,
     this.strCategory,
     this.linkCategory,
-    // this.screen,
+    this.screen,
   );
 
   factory Category.fromJson(Map<String, dynamic> json) {
@@ -16,7 +16,7 @@ class Category {
       json['idCategory'] as String,
       json['strCategory'] as String,
       json['linkCategory'] as String,
-      // json['screen'] as String,
+      json['screen'] as String,
     );
   }
 }

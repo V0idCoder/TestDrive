@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/services.dart';
+import 'package:testdrive/models/model.dart';
 
 import '../models/models.dart';
 
@@ -33,6 +34,22 @@ class MockTestDriveService {
         brands.add(Brand.fromJson(v));
       });
       return brands;
+    }
+    return [];
+  }
+
+  Future<List<Model>> getModels() async {
+    final modeldataString =
+        await rootBundle.loadString('assets/data/models.json');
+    final Map<String, dynamic> json = jsonDecode(modeldataString);
+
+    if (json['models'] != null) {
+      //Attention à controler vos données
+      final models = <Model>[];
+      json['models'].forEach((v) {
+        models.add(Model.fromJson(v));
+      });
+      return models;
     }
     return [];
   }

@@ -67,8 +67,10 @@ flutter:
   assets:
     - assets/data/categories.json
     - assets/data/brands.json
+    - assets/data/models.json
     - assets/img/home/
     - assets/img/brand/
+    
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

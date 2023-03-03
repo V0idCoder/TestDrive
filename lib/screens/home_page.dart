@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
             idCategory: categories[index].idCategory,
             strCategory: categories[index].strCategory,
             linkCategory: categories[index].linkCategory,
-            // screen: categories[index].screen,
+            screen: categories[index].screen,
           ),
         ),
       ),

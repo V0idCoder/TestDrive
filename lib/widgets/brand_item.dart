@@ -2,12 +2,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:testdrive/screens/home_page.dart';
-import 'package:testdrive/screens/test.dart';
 
 import '../screens/brand_quiz.dart';
 
-class BrandItem extends StatefulWidget {
-  const BrandItem({
+class ModelItem extends StatefulWidget {
+  const ModelItem({
     super.key,
     required this.idBrand,
     required this.strBrand,
@@ -33,15 +32,16 @@ class BrandItem extends StatefulWidget {
   final Function() endGame;
 
   @override
-  State<BrandItem> createState() => _BrandItemState();
+  State<ModelItem> createState() => _ModelItemState();
 }
 
-class _BrandItemState extends State<BrandItem> {
+class _ModelItemState extends State<ModelItem> {
   //Bon ce n'est pas trés optimale mais "ça passe"
   bool pressed1 = false;
   bool pressed2 = false;
   bool pressed3 = false;
   bool pressed4 = false;
+  int score = 0;
 
   //NextButton Icon
   Icon icon = const Icon(
@@ -126,8 +126,10 @@ class _BrandItemState extends State<BrandItem> {
               setState(() {
                 if (widget.choice1 == widget.answer) {
                   pressed1 = !pressed1;
+                  score++;
                 } else {
                   pressed1 = pressed1;
+                  score--;
                 }
               });
             },
@@ -158,8 +160,12 @@ class _BrandItemState extends State<BrandItem> {
                 () {
                   if (widget.choice2 == widget.answer) {
                     pressed2 = !pressed2;
+                    score++;
                   } else {
                     pressed2 = pressed2;
+                    if (score != 0) {
+                      score--;
+                    }
                   }
                 },
               );
@@ -191,8 +197,12 @@ class _BrandItemState extends State<BrandItem> {
                 () {
                   if (widget.choice3 == widget.answer) {
                     pressed3 = !pressed3;
+                    score++;
                   } else {
                     pressed3 = pressed3;
+                    if (score != 0) {
+                      score--;
+                    }
                   }
                 },
               );
@@ -225,8 +235,12 @@ class _BrandItemState extends State<BrandItem> {
                 () {
                   if (widget.choice4 == widget.answer) {
                     pressed4 = !pressed4;
+                    score++;
                   } else {
                     pressed4 = pressed4;
+                    if (score != 0) {
+                      score--;
+                    }
                   }
                 },
               );
@@ -241,18 +255,16 @@ class _BrandItemState extends State<BrandItem> {
           //NextButton -> Show the next question
           ElevatedButton(
             style: confirmButtonStyle,
-            child: icon,
+            child: Text('$score'), //icon,
+
             onPressed: () {
-              //Resset the button color 
+              //Call the function next dans brand_quiz.dart pour passer à la question suivante
               pressed1 = false;
               pressed2 = false;
               pressed3 = false;
               pressed4 = false;
-              //Call the function next dans brand_quiz.dart pour passer à la question suivante
               widget.nextQuestion();
               widget.endGame();
-
-              // Navigator.of(context).pushNamed(Test.routeName);
             },
           ),
         ],

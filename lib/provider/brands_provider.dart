@@ -16,17 +16,10 @@ class BrandProvider with ChangeNotifier {
   }
 
   Brand findById(String idBrand) {
-    return categories.firstWhere((brand) => brand.idBrand == idBrand);
+    return brands.firstWhere((brand) => brand.idBrand == idBrand);
   }
 
-  List<Brand> get categories {
+  List<Brand> get brands {
     return [..._brands];
-  }
-
-  void SetIndex() {
-    if (index < _brands.length) {
-      index++;
-    }
-    notifyListeners();
   }
 }

@@ -4,13 +4,13 @@
             "idCategory": "1",
             "strCategory": "Brand Quiz",
             "linkCategory": "https://wallpapercave.com/wp/BIABia5.jpg",
-            "screen": "BrandQuizScreen.routeName"
+            "screen": "BrandQuizScreen"
         },
         {
             "idCategory": "2",
             "strCategory": "Model Quiz",
             "linkCategory": "https://c0.wallpaperflare.com/preview/832/465/155/car-light-headlight-glow.jpg",
-            "screen": "BrandQuizScreen.routeName"
+            "screen": "ModelQuizScreen.routeName"
         },
         {
             "idCategory": "3",

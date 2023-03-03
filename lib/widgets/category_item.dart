@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../screens/brand_quiz.dart';
+import '../screens/model_quiz.dart';
 
 class CategoryItem extends StatelessWidget {
   const CategoryItem({
@@ -8,13 +9,13 @@ class CategoryItem extends StatelessWidget {
     required this.idCategory,
     required this.strCategory,
     required this.linkCategory,
-    // required this.screen,
+    required this.screen,
   });
 
   final String idCategory;
   final String strCategory;
   final String linkCategory;
-  // final String screen;
+  final String screen;
 
   @override
   Widget build(BuildContext context) {
@@ -41,21 +42,16 @@ class CategoryItem extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.of(context).pushNamed(BrandQuizScreen.routeName,
-                        arguments: idCategory);
+                    // ignore: unrelated_type_equality_checks
+                    if (idCategory == "1") {
+                      Navigator.of(context).pushNamed(BrandQuizScreen.routeName,
+                          arguments: idCategory);
+                    } else {
+                      Navigator.of(context).pushNamed(ModelQuizScreen.routeName,
+                          arguments: idCategory);
+                    }
                   },
                 ),
-                // Container(
-                //   width: 200,
-                //   height: 200,
-                //   margin: const EdgeInsets.all(60),
-                //   padding: const EdgeInsets.all(5),
-                //   child: Center(
-                //       child: Text(
-                //     strCategory,
-                //     style: const TextStyle(color: Colors.yellow),
-                //   )),
-                // ),
               ],
             ),
           ),

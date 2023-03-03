@@ -1,0 +1,24 @@
+{
+    "models": [
+        {
+            "idModel": "m1",
+            "strModel": "BMW x6",
+            "linkModel": "https://editorial.pxcrush.net/carsales/general/editorial/ge5401777314275680223.jpg?width=1024&height=683&aspect=pad"
+        },
+        {
+            "idModel": "m2",
+            "strModel": "Mercedes GLE",
+            "linkModel": "https://i.pinimg.com/originals/06/2c/85/062c8586a4633cbf5a375b57e63269b3.jpg"
+        },
+        {
+            "idModel": "m3",
+            "strModel": "Toyota Supra",
+            "linkModel": "https://edge.99images.com/photos/wallpapers/cars/cars%20android-iphone-desktop-hd-backgrounds-wallpapers-1080p-4k-zqebx.jpg"
+        },
+        {
+            "idModel": "m4",
+            "strModel": "BMW m5",
+            "linkModel": "https://www.automobile-magazine.fr/asset/cms/840x394/173769/config/122539/p90390721.jpeg"
+        }
+    ]
+}
