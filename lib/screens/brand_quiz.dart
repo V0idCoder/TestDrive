@@ -28,6 +28,8 @@ class _BrandQuizScreenState extends State<BrandQuizScreen> {
   int index = 0;
   int index2 = 1;
 
+  List<int> nombres = [];
+
   @override
   Future<void> didChangeDependencies() async {
     if (!_isInit) {
@@ -42,9 +44,16 @@ class _BrandQuizScreenState extends State<BrandQuizScreen> {
     setState(() {
       var rng = Random();
       rndIndex = rng.nextInt(lengthBrands);
-      if (rndIndex == rndIndex) {
-        rndIndex = rng.nextInt(lengthBrands);
-      }
+
+      nombres.forEach((element) {
+        if (element != rndIndex) {
+          rndIndex;
+          nombres.add(rndIndex);
+          developer.log('$nombres');
+        } else {
+          developer.log('$nombres');
+        }
+      });
     });
   }
 

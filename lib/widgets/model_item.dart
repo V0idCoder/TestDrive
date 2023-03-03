@@ -1,3 +1,5 @@
+import 'dart:developer' as developer;
+
 import 'package:flutter/material.dart';
 
 class ModelItem extends StatefulWidget {
@@ -42,26 +44,16 @@ class _ModelItemState extends State<ModelItem> {
       ),
     );
 
-    late TextEditingController _controller;
+    var answer = widget.strModel;
 
-    @override
-    void initState() {
-      super.initState();
-      _controller = TextEditingController();
-    }
-
-    @override
-    void dispose() {
-      _controller.dispose();
-      super.dispose();
-    }
+    TextEditingController userAnswer = TextEditingController();
 
     return Center(
       child: (Column(
         children: [
           //Spacer
           const SizedBox(
-            height: 50.0,
+            height: 30.0,
           ),
 
           ClipRRect(
@@ -92,34 +84,60 @@ class _ModelItemState extends State<ModelItem> {
             height: 30.0,
           ),
 
-          const SizedBox(
+          SizedBox(
             width: 360,
-            child: TextField(
-              //controller: _userAnswer,
-              decoration: InputDecoration(
+            child: TextFormField(
+              controller: userAnswer,
+              decoration: const InputDecoration(
                 fillColor: Colors.white,
                 border: OutlineInputBorder(),
                 labelText: 'Type the model\'s name here...',
               ),
+              validator: ((userAnswer) {
+                if (userAnswer != widget.strModel) {
+                  return "false";
+                }
+                return null;
+              }),
             ),
           ),
 
           //Spacer
           const SizedBox(
-            height: 50.0,
+            height: 30.0,
           ),
+          ListTile(
+            leading: ElevatedButton(
+              style: confirmButtonStyle,
+              child: const Text('IDK'),
+              onPressed: () {},
+            ),
+            trailing: ElevatedButton(
+              style: confirmButtonStyle,
+              child: icon,
+              onPressed: () {
+                userAnswer.clear();
+                widget.nextQuestion();
+                widget.endGame();
+              },
+            ),
+          )
 
-          ElevatedButton(
-            style: confirmButtonStyle,
-            child: icon,
-            onPressed: () {
-              //Call the function next dans model_quiz.dart pour passer à la question suivante
-              widget.nextQuestion();
-              widget.endGame();
-              initState();
-              dispose();
-            },
-          ),
+          // ElevatedButton(
+          //   style: confirmButtonStyle,
+          //   child: icon,
+          //   onPressed: () {
+          //     //Call the function next dans model_quiz.dart pour passer à la question suivante
+
+          //     if (userAnswer == answer || userAnswer == ' ') {
+          //       userAnswer.clear();
+          //       widget.nextQuestion();
+          //       widget.endGame();
+          //     } else {
+          //       developer.log('Faux');
+          //     }
+          //   },
+          // ),
         ],
       )),
     );

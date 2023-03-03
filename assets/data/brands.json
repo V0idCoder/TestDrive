@@ -72,23 +72,23 @@
         },
         {
             "idBrand": "b8",
-            "strBrand": "Ford",
-            "linkBrand": "https://w0.peakpx.com/wallpaper/411/325/HD-wallpaper-ford-logo-ford-emblem-on-a-black-background-ford-automobile-brand-ford-emblem.jpg",
-            "choice1": "DS",
-            "choice2": "Ford",
+            "strBrand": "Tesla",
+            "linkBrand": "https://t3.ftcdn.net/jpg/04/63/05/30/360_F_463053093_eBZ5DvW11BRcXFagxEsljv4NJJdYl8xd.jpg",
+            "choice1": "Tesla",
+            "choice2": "Volvo",
             "choice3": "VW",
-            "choice4": "Alpha Romeo",
-            "answer": "Ford"
+            "choice4": "Nissan",
+            "answer": "Tesla"
         },
         {
             "idBrand": "b9",
-            "strBrand": "Ford",
-            "linkBrand": "https://w0.peakpx.com/wallpaper/411/325/HD-wallpaper-ford-logo-ford-emblem-on-a-black-background-ford-automobile-brand-ford-emblem.jpg",
-            "choice1": "DS",
-            "choice2": "Ford",
-            "choice3": "VW",
-            "choice4": "Alpha Romeo",
-            "answer": "Ford"
+            "strBrand": "Masserati",
+            "linkBrand": "https://cdn.wallpapersafari.com/26/8/EBLxUh.png",
+            "choice1": "Masserati",
+            "choice2": "Bentley",
+            "choice3": "Alpine",
+            "choice4": "Ferrari",
+            "answer": "Masserati"
         },
         {
             "idBrand": "b10",

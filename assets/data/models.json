@@ -19,6 +19,26 @@
             "idModel": "m4",
             "strModel": "BMW m5",
             "linkModel": "https://www.automobile-magazine.fr/asset/cms/840x394/173769/config/122539/p90390721.jpeg"
+        },
+        {
+            "idModel": "m5",
+            "strModel": "VW",
+            "linkModel": "https://www.topgear.com/sites/default/files/cars-car/image/2015/01/buyers_guide_-_volkswagen_passat_2014_-_front_quarter_2.jpg"
+        },
+        {
+            "idModel": "m6",
+            "strModel": "Tesla Model X",
+            "linkModel": "https://images.frandroid.com/wp-content/uploads/2019/12/tesla-model-x.jpg"
+        },
+        {
+            "idModel": "m7",
+            "strModel": "Ford Ranger Raptor",
+            "linkModel": "https://www.fr.ford.ch/content/dam/guxeu/rhd/central/cars/2022-ranger-raptor/pre-launch/gallery/exterior/ford-ranger-eu-P703R_005-16x9-2160x1215.jpg.renditions.original.png"
+        },
+        {
+            "idModel": "m8",
+            "strModel": "Mercedes CLA",
+            "linkModel": "https://www.turbo.fr/sites/default/files/migration/model/field_image/000000005652852.jpg"
         }
     ]
 }

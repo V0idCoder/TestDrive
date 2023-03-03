@@ -43,6 +43,8 @@ class _ModelItemState extends State<ModelItem> {
   bool pressed4 = false;
   int score = 0;
 
+  List<int> nombres = [];
+
   //NextButton Icon
   Icon icon = const Icon(
     Icons.arrow_right_alt_rounded,
@@ -255,7 +257,7 @@ class _ModelItemState extends State<ModelItem> {
           //NextButton -> Show the next question
           ElevatedButton(
             style: confirmButtonStyle,
-            child: Text('$score'), //icon,
+            child: icon, //Text('$score'), //icon,
 
             onPressed: () {
               //Call the function next dans brand_quiz.dart pour passer à la question suivante

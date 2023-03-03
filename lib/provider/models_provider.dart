@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:testdrive/models/model.dart';
 
 import '../infrastructure/mock_testdrive_service.dart';
-import '../models/models.dart';
+import '../models/model.dart';
 
 class ModelProvider with ChangeNotifier {
   final List<Model> _models = [];
@@ -22,12 +21,5 @@ class ModelProvider with ChangeNotifier {
 
   List<Model> get categories {
     return [..._models];
-  }
-
-  void SetIndex() {
-    if (index < _models.length) {
-      index++;
-    }
-    notifyListeners();
   }
 }
