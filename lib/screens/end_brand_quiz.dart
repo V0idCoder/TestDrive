@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 
 class EndBrandQuiz extends StatelessWidget {
   const EndBrandQuiz({super.key});
-  static const routeName = '/test';
+  static const routeName = '/endBrandQuiz';
 
   @override
   Widget build(BuildContext context) {
